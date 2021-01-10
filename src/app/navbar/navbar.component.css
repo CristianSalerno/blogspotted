@@ -1,0 +1,21 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline;
+  margin-right: 15px;
+}
+
+.navbar ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}

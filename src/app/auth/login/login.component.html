@@ -1,19 +1,9 @@
 <div class="container">
   <div class="login">
-    <div class="login-triangle"></div>
-
-    <h2 class="login-header">Log in</h2>
-
-    <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)">
-      <p>
+    <form #frmLogin="ngForm" class="login-container" (ngSubmit)="onLogin(frmLogin)"> 
         <input type="email" name="email" placeholder="Email" ngModel required>
-      </p>
-      <p>
         <input type="password" name="password" placeholder="Password" ngModel required>
-      </p>
-      <p>
-        <input type="submit" value="Send">
-      </p>
+        <input type="submit" value="Send"> 
     </form>
   </div>
 </div>
