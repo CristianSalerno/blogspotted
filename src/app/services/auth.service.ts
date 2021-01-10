@@ -29,9 +29,9 @@ export class AuthService {
     return this.httpClient.post<JwtResponseI>(`${this.AUTH_SERVER}/login`,
       user).pipe(tap(
         (res: JwtResponseI) => {
-          if (res) {
-            // guardar token
-            this.saveToken(res.dataUser.accessToken, res.dataUser.expiresIn);
+          if (res ) {
+            // obtener token
+            this.getToken();
           }
         })
       );
