@@ -5,11 +5,33 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+
+
+
 export class NavbarComponent implements OnInit {
+  isLogged:any= this.getToken();
+  token:string
 
-  constructor() { }
+  constructor() { 
 
-  ngOnInit() {
+  }
+
+  ngOnInit() { 
+  }
+
+  private getToken(): boolean {
+
+    if( localStorage.getItem("ACCESS_TOKEN") !== null ){
+      this.token = localStorage.getItem("ACCESS_TOKEN");
+      return true;
+    }
+    return false;
+  }
+
+   logout(){
+    this.token = '';
+    localStorage.removeItem("ACCESS_TOKEN");
+    localStorage.removeItem("EXPIRES_IN");
   }
 
 }
